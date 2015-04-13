@@ -1,0 +1,25 @@
+{
+  "name": "angular-icheck",
+  "main": "angular-icheck.js",
+  "version": "1.0.0",
+  "authors": [
+    "xialeistudio <xialeistudio@gmail.com>"
+  ],
+  "description": "a icheck directive for angularjs like jQuery iCheck.",
+  "keywords": [
+    "angularjs",
+    "icheck"
+  ],
+  "license": "MIT",
+  "homepage": "https://git.coding.net/xialei/angular-icheck.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.15"
+  }
+}
