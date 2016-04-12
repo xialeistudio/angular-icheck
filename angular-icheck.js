@@ -14,15 +14,21 @@ angular.module('angular-icheck', [])
                 ele.bind("click", function () {
                     box.toggleClass("checked");
                     ctrl.$setViewValue(box.hasClass("checked"));
-
                 });
                 ctrl.$render = function () {
                     if (ctrl.$viewValue) {
                         box.addClass("checked");
-                    }else{
+                    } else {
                         box.removeClass("checked");
                     }
                 };
+                // https://github.com/angular/angular.js/issues/2594
+                // override $isEmpty method
+                ctrl.$isEmpty = function(value) {
+                    return value === false;
+                };
+                ctrl.$setViewValue(box.hasClass("checked"));
+                ctrl.$validate();
             }
         }
     }]);
